@@ -15,3 +15,13 @@ export const updateTodo = ({message,id}) => ({
     message,
     id,
 });
+
+// export const completeTodo = (index) => ({
+//     type: COMPLETE_TODO,
+//     index,
+// });
+
+// export const setVisibilityFilter = (filter) => ({
+//     type: SET_VISIBILITY_FILTER,
+//     filter
+// });

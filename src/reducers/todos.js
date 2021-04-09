@@ -8,6 +8,7 @@ const todos = (state = initialState,action) => {
             return {
                 ...state,
                 data: [...state.data, action.message],
+                completed: false
             };
         case "DELETE_TODO":
             return {
@@ -21,8 +22,16 @@ const todos = (state = initialState,action) => {
                 {task: action.message,id:action.id}],
 
             };
+        // case "COMPLETE_TODO":
+        //     return [
+        //         ...state.slice(0, action.index),
+        //         Object.assign({}, state[action.index], {
+        //          completed: true
+        //         }),
+        //         ...state.slice(action.index + 1)
+        //     ];
         default:
-            return state
+            return state;
     }
 }
 
